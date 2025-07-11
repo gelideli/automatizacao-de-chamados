@@ -44,10 +44,10 @@ async function carregarChamados() {
     const etiqueta = document.createElement('div');
     etiqueta.style.position = 'absolute';
     etiqueta.style.bottom = '0px';
-    etiqueta.style.right = '10px';
-    etiqueta.style.width = '20px';
-    etiqueta.style.height = '30px';
-    etiqueta.style.borderRadius = '5px 5px 0 0';
+    etiqueta.style.right = '0px';
+    etiqueta.style.width = '100%';
+    etiqueta.style.height = '15px';
+    etiqueta.style.borderRadius = '1px 1px 1px 1px';
 
     switch (chamado.prioridade.toLowerCase()) {
       case 'urgente':
@@ -75,7 +75,6 @@ async function carregarChamados() {
       <p><strong>Prioridade:</strong> ${chamado.prioridade}</p>
       <p><strong>Descrição:</strong><br>${chamado.descricao}</p>
       <p style="font-size: 12px; color: #777;">${chamado.data || ''}</p>
-
     `;
 
     card.appendChild(etiqueta);
